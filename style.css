@@ -1,0 +1,143 @@
+/******************** reset ***********/
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+/******************** global ************/
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url(./fonts/RedHatDisplay-VariableFont\ 500_wght.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url(./fonts/RedHatDisplay-VariableFont_700wght.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url(./fonts/RedHatDisplay-VariableFont_900wght.ttf);
+    font-weight: 900;
+}
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+body {
+    background-color: var(--Pale-blue);
+    text-align: center;
+    font-family: 'Red Hat Display';
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/******************** main ***********/
+div.container {
+    background-color: var(--Very-pale-blue);
+    width: 87%; 
+    border-radius: 1em;
+    box-shadow: 0 2px 8px 1px var(--Desaturated-blue);
+}
+div.image img {
+    width: 100%;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+div.text-container h1 {
+    color: var(--Dark-blue);
+    font-size: 1.3em;
+    font-weight: 900;
+    margin: 1em;
+}
+div.text-container p {
+    color: var(--Desaturated-blue);
+    font-size: 16px;
+    font-family: 'Red Hat Display';
+    font-weight: 500;
+    line-height: 25px;
+    margin-bottom: 1em;
+    padding: 0 30px;
+}
+div.box {
+    background-color: hsl(228, 79%, 96%);;
+    width: 87%;
+    height: 70px;
+    border-radius: 1em;
+    padding: 25px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.box a {
+    color: var(--Bright-blue);
+    text-decoration: underline;
+    font-weight: 900;
+    font-size: 0.8em;
+}
+div.box p {
+    font-size: 0.8em;
+}
+div.box-left {
+    display: flex;
+    align-items: center;
+}
+div.box-left h2 {
+    font-size: 0.9em;
+    font-weight: 900;
+    
+}
+div.box-left p {
+    color: var(--Desaturated-blue);
+    font-size: 0.9em;
+    margin-top: 4px;
+}
+div.box-left div {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+div.btn1 a.proceed-btn {
+    background-color: var(--Bright-blue);
+    color: white;
+    width: 87%;
+    border-radius: 0.6em;
+    padding: 15px 0;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    box-shadow: 0 8px 8px 0.5px var(--Desaturated-blue);
+}
+div.btn2 a.cancel-btn {
+    color: var(--Desaturated-blue);
+    font-weight: 900;
+    font-size: 0.9em;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+div.attribution {
+    margin-top: 1em;
+}
+/******************** media query *******************************/
+@media screen and (min-width: 992px) {
+    div.container {
+        width: 25%;
+    }
+    div.text-container p {
+        padding: 0 30px;
+    }
+}
